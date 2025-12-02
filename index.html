@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Drupal-coder — профессиональная поддержка и разработка сайтов на Drupal. 14 лет опыта." />
+  <title>Drupal-coder — поддержка сайтов на Drupal</title>
+  
+  <!-- Конфигурация сайта -->
+  <script>
+  window.CONFIG = {
+    formEndpoint: "https://formcarry.com/s/0VNi-UehV3I",
+    api: {
+      timeout: 10000,
+      retries: 3
+    },
+    analytics: {
+      enabled: false,
+      googleAnalyticsId: null
+    },
+    features: {
+      animations: true,
+      lazyLoading: true,
+      serviceWorker: false
+    },
+    contact: {
+      phone: "8 800 222-26-73",
+      email: "info@drupal-coder.ru",
+      address: "г. Краснодар, ул. Красная, 180"
+    },
+    social: {
+      telegram: "#",
+      vk: "#",
+      github: "#"
+    }
+  };
+  window.FORM_ENDPOINT = window.CONFIG.formEndpoint;
+  </script>
+  
+  <!-- Шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-nav">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo">
+            <img src="assets/logo.svg" alt="Drupal-coder" width="160" height="35">
+          </div>
+          
+          <!-- Desktop Menu -->
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#services">ПОДДЕРЖКА DRUPAL</a></li>
+            <li class="nav-item has-dropdown">
+              <a href="#admin">АДМИНИСТРИРОВАНИЕ</a>
+              <ul class="dropdown-menu">
+                <li><a href="#migration">Миграция</a></li>
+                <li><a href="#backups">Бэкапы</a></li>
+                <li><a href="#security">Аудит безопасности</a></li>
+                <li><a href="#optimization">Оптимизация скорости</a></li>
+                <li><a href="#https">Переезд на HTTPS</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="#seo">ПРОДВИЖЕНИЕ</a></li>
+            <li class="nav-item"><a href="#reviews">ОТЗЫВЫ</a></li>
+            <li class="nav-item"><a href="#faq">FAQ</a></li>
+          </ul>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="mobile-toggle" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Contact Button -->
+          <button class="contact-btn" id="contact-open">Связь с нами</button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero-new-with-video">
+      <video autoplay muted loop playsinline class="hero-new-video">
+        <source src="assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-new-video-overlay"></div>
+      
+      <div class="container">
+        <div class="hero-new-content">
+          <div class="hero-text">
+            <h1 class="hero-title-new">
+              Поддержка сайтов на Drupal
+            </h1>
+            <p class="hero-subtitle-new">
+              Сопровождение и поддержка сайтов<br>
+              на CMS Drupal любых версий и запущенности
+            </p>
+            <div class="hero-actions">
+              <a href="#pricing" class="btn btn-primary">ТАРИФЫ</a>
+            </div>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-content">
+                <div class="stat-number orange">#1</div>
+                <div class="rating-badge">
+                  <img src="assets/badge.png" alt="Рейтинг" width="40" height="40">
+                </div>
+              </div>
+              <div class="stat-text">Drupal-разработчик в России</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number orange">50+</div>
+              <div class="stat-text">модулей и тем<br>в формате DrupalGive</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number orange">3+</div>
+              <div class="stat-text">средний опыт<br>специалистов более 3 лет</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number orange">14</div>
+              <div class="stat-text">лет в сфере Drupal</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number orange">90 000+</div>
+              <div class="stat-text">часов поддержки<br>сайтов на Drupal</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number orange">300+</div>
+              <div class="stat-text">Проектов на поддержке</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Services Grid Section -->
+    <section class="services-grid-section" id="services">
+      <div class="container">
+        <div class="expertise-header-left">
+          <h2>13 лет совершенствуем <br> компетенции в Друпал <br> поддержке!</h2>
+          <p>Разрабатываем и оптимизируем модули,<br> расширяем функциональность сайтов, обновляем дизайн</p>
+        </div>
+        
+        <div class="services-grid-new-4col">
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="assets/icons/content.svg" alt="Добавление информации" width="60" height="60">
+            </div>
+            <h3>Добавление информации на сайт, создание новых разделов</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="assets/icons/security.svg" alt="Аудит безопасности" width="60" height="60">
+            </div>
+            <h3>Аудит и мониторинг безопасности Drupal сайтов</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="assets/icons/development.svg" alt="Разработка модулей" width="60" height="60">
+            </div>
+            <h3>Разработка и оптимизация модулей сайта</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="assets/icons/competency-6.svg" alt="Миграция Drupal" width="60" height="60">
+            </div>
+            <h3>Миграция, импорт контента и апгрейд Drupal</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="assets/icons/competency-3.svg" alt="Интеграция" width="60" height="60">
+            </div>
+            <h3>Интеграция с CRM, 1C, платежными системами</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="assets/icons/competency-7.svg" alt="Оптимизация" width="60" height="60">
+            </div>
+            <h3>Оптимизация и ускорение Drupal-сайтов</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="assets/icons/competency-4.svg" alt="Доработки" width="60" height="60">
+            </div>
+            <h3>Любые доработки функционала и дизайна</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="assets/icons/competency-8.svg" alt="Веб-маркетинг" width="60" height="60">
+            </div>
+            <h3>Веб-маркетинг, консультации и работы по SEO</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+      <div class="container">
+        <div class="section-header">
+          <h2>Наша команда</h2>
+        </div>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="assets/team/sergey.jpg" alt="Сергей Синицын" loading="lazy">
+            </div>
+            <h3>Сергей Синицын</h3>
+            <p class="member-role">Руководитель отдела веб-разработки</p>
+            <p class="member-bio">Кандидат технических наук, опыт работы 15 лет</p>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="assets/team/roman.jpg" alt="Роман Агабеков" loading="lazy">
+            </div>
+            <h3>Роман Агабеков</h3>
+            <p class="member-role">Руководитель отдела DevOPS</p>
+            <p class="member-bio">Сертифицированный Drupal-разработчик, опыт 12 лет</p>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="assets/team/aleksey.jpg" alt="Алексей Синицын" loading="lazy">
+            </div>
+            <h3>Алексей Синицын</h3>
+            <p class="member-role">Руководитель отдела поддержки сайтов</p>
+            <p class="member-bio">Эксперт по Drupal, опыт 10 лет</p>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="assets/team/Снимок экрана 2025-12-01 в 13.39.58.png" alt="Царенов Олег" loading="lazy">
+            </div>
+            <h3>Царенов Олег</h3>
+            <p class="member-role">студент ПИ-22/2</p>
+            <p class="member-bio">Умный человек чета там занет, кандидат каких то наук, сайт вот сделал</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Тарифы поддержки</h2>
+          <p>Гибкие условия для проектов любого масштаба</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Стартовый</h3>
+            </div>
+            <ul class="pricing-features">
+              <li>✓ Мониторинг доступности</li>
+              <li>✓ Резервное копирование</li>
+              <li>✓ Обновления безопасности</li>
+              <li>✓ Поддержка 5×8 (рабочие дни)</li>
+              <li>✓ Время реакции: 24 часа</li>
+            </ul>
+            <button class="btn btn-outline pricing-btn" onclick="window.dispatchEvent(new CustomEvent('open-react-popup'))">Выбрать тариф</button>
+          </div>
+
+          <div class="pricing-card popular">
+            <div class="popular-badge">Популярный</div>
+            <div class="pricing-header">
+              <h3>Бизнес</h3>
+            </div>
+            <ul class="pricing-features">
+              <li>✓ Все из Стартового</li>
+              <li>✓ Проактивный мониторинг</li>
+              <li>✓ Оптимизация производительности</li>
+              <li>✓ Поддержка 12×7</li>
+              <li>✓ Время реакции: 4 часа</li>
+              <li>✓ Персональный менеджер</li>
+            </ul>
+            <button class="btn btn-primary pricing-btn" onclick="window.dispatchEvent(new CustomEvent('open-react-popup'))">Выбрать тариф</button>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>VIP</h3>
+            </div>
+            <ul class="pricing-features">
+              <li>✓ Все из Бизнес</li>
+              <li>✓ Выделенный инженер</li>
+              <li>✓ Гарантия SLA 99.9%</li>
+              <li>✓ Поддержка 24×7</li>
+              <li>✓ Время реакции: 15 минут</li>
+              <li>✓ Ежемесячные отчеты</li>
+            </ul>
+            <button class="btn btn-outline pricing-btn" onclick="window.dispatchEvent(new CustomEvent('open-react-popup'))">Выбрать тариф</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section class="cases" id="cases">
+      <div class="container">
+        <div class="section-header">
+          <h2>Наши кейсы</h2>
+          <p>Реальные примеры успешных проектов</p>
+        </div>
+        <div class="cases-grid">
+          <div class="case-card">
+            <div class="case-image">
+              <img src="assets/cases/mvideo.jpg" alt="Интернет-магазин электроники" loading="lazy">
+            </div>
+            <div class="case-content">
+              <h3>Интернет-магазин электроники</h3>
+              <p>Разработка высоконагруженного магазина с интеграцией 1С и платежных систем</p>
+              <div class="case-stats">
+                <div class="case-stat">
+                  <strong>+40%</strong>
+                  <span>Конверсия</span>
+                </div>
+                <div class="case-stat">
+                  <strong>2.5с</strong>
+                  <span>Загрузка страницы</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-image">
+              <img src="assets/cases/corparat.jpg" alt="Корпоративный портал" loading="lazy">
+            </div>
+            <div class="case-content">
+              <h3>Корпоративный портал</h3>
+              <p>Создание интранет-портала для 5000+ сотрудников с системой документооборота</p>
+              <div class="case-stats">
+                <div class="case-stat">
+                  <strong>5000+</strong>
+                  <span>Пользователей</span>
+                </div>
+                <div class="case-stat">
+                  <strong>99.9%</strong>
+                  <span>Доступность</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <h2>Отзывы клиентов</h2>
+        </div>
+        <div class="reviews-slider-single">
+          <div class="review-card-large">
+
+            <div class="review-content">
+              
+              <p>"Долгие поиски единственного и неповторимого мастера на многострадальный сайт www.cielparfum.com, который был собран крайне некомпетентным программистом и раз в месяц стабильно грозил погибнуть, привели меня на сайт и, в итоге, к ребятам из Drupal-coder. И вот уже практически полгода как не проходит и дня, чтобы я не поудивлялась и не порадовалась своему везению!</p>
+              <p>Починили все, что не работало - от поиска до отображения меню. Провели редизайн - не отходя от желаемого, но со своими существенными и качественными дополнениями.</p>
+              <p>Осуществили ряд проектов - конкурсы, тесты и тд. А уж мелких починок и доработок - не счесть! И главное - все качественно и быстро (не взирая на не самый "быстрый" тариф). Есть вопросы - замечательный Алексей всегда подскажет, поддержит, отремонтирует и/или просто сделает с нуля. Есть задумка для реализации - замечательный Сергей обсудит и предложит идеальный вариант. Есть проблема - замечательные Надежда и Роман починят, поправят, сделают! Ребята доказали, что эта CMS - мощная и грамотная система управления. Надеюсь, что наше сотрудничество затянется надолго! Спасибо!!!"</p>
+            </div>
+            <div class="review-author">
+            <img src="assets/reviews/logo_0.png" alt="Светлана Никулова" loading="lazy">
+              <div class="author-info">
+                <h4>Светлана Никулова</h4>
+                <p>Руководитель отдела веб-проектов группы компаний «СИЭЛЬ ПАРФЮМ»</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2>FAQ</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>1. Кто непосредственно занимается поддержкой?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Царенов Олег ПИ-22/2</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>2. Как организована работа поддержки?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Мы используем систему Helpdesk для управления задачами и обеспечения прозрачности работы.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>3. Что происходит, когда отработаны все предоплаченные часы за месяц?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Неиспользованные оплаченные часы переносятся на следующий месяц в пределах действия договора.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>4. Что происходит, когда не отработаны все предоплаченные часы за месяц?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Неиспользованные часы сохраняются и могут быть использованы в последующие месяцы.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>5. Как происходит оценка и согласование планируемого времени на выполнение заявок?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Время оценивается специалистами и согласовывается с клиентом перед началом работ.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>6. Сколько программистов выделяется на проект?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Количество программистов зависит от сложности проекта и выбранного тарифа поддержки.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>7. Как подать заявку на внесение изменений на сайте?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Заявки подаются через систему Helpdesk, по email или через мессенджеры.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>8. Как подать заявку на добавление пользователя, изменение настроек веб-сервера и других задач по администрированию?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Все административные задачи также оформляются через систему заявок.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>9. В течение какого времени начинается работа по заявке?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Работа по заявке начинается в течение 1 рабочего дня для стандартных тарифов и в течение 15 минут для VIP тарифов.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>10. В какое время работает поддержка?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Поддержка работает согласно выбранному тарифу: 5×8, 12×7 или 24×7.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>11. Подходят ли услуги поддержки, если необходимо произвести обновление ядра Drupal или модулей?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Да, обновления ядра и модулей входят в перечень наших услуг.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>12. Можно ли пообщаться со специалистом голосом или в мессенджере?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Да, мы предоставляем различные способы коммуникации включая голосовые звонки и мессенджеры.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer-new" id="contacts">
+    <div class="container">
+      <div class="footer-contact-form">
+        <div class="footer-form-two-columns">
+          <div class="footer-form-text">
+            <h2>Оставить заявку на <br> поддержку сайта</h2>
+            <p>Срочно нужна поддержка сайта? Ваша команда не успевает справиться самостоятельно или предыдущий подрядчик не справился с работой? Тогда вам точно к нам! Просто оставьте заявку и наш менеджер с вами свяжется!</p>
+            
+            <div class="contact-info-large">
+              <div class="contact-phone">8 800 222-26-73</div>
+              <div class="contact-email">info@drupal-coder.ru</div>
+            </div>
+          </div>
+          
+          <div class="footer-form-container">
+            <form class="footer-contact-form" id="bottom-form">
+              <input type="hidden" name="form_type" value="footer_contact">
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Ваше имя *" required>
+                </div>
+                <div class="form-group">
+                  <input type="tel" name="phone" placeholder="Телефон *" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="E-mail">
+              </div>
+              <div class="form-group">
+                <textarea name="message" placeholder="Ваш комментарий" rows="3"></textarea>
+              </div>
+              
+              <div class="form-checkboxes">
+                <label class="checkbox-label">
+                  <input type="checkbox" required>
+                  <span class="checkmark"></span>
+                  Отправляя заявку, я даю согласие на обработку своих персональных данных.*
+                </label>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-block">СВЯЖИТЕСЬ С НАМИ</button>
+              <div id="bottom-form-status" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom-new">
+        <div class="footer-legal">
+          <p>Проект ООО &laquo;Инжинилаб&raquo;, Краснодар, Россия.<br>
+          Drupal является зарегистрированной торговой маркой Dries Buytaert.</p>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; 2024 Drupal-coder. Все права защищены.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="Drupal-coder" width="160" height="35">
+      </div>
+      <button class="mobile-close" aria-label="Закрыть меню">×</button>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li class="mobile-menu-item">
+          <div class="mobile-menu-header">
+            <a href="#services">ПОДДЕРЖКА DRUPAL</a>
+            <span class="mobile-menu-toggle">+</span>
+          </div>
+          <ul class="mobile-submenu">
+            <li><a href="#migration">Миграция</a></li>
+            <li><a href="#backups">Бэкапы</a></li>
+            <li><a href="#security">Аудит безопасности</a></li>
+            <li><a href="#optimization">Оптимизация скорости</a></li>
+            <li><a href="#https">Переезд на HTTPS</a></li>
+          </ul>
+        </li>
+        <li><a href="#admin">АДМИНИСТРИРОВАНИЕ</a></li>
+        <li><a href="#seo">ПРОДВИЖЕНИЕ</a></li>
+        <li><a href="#reviews">ОТЗЫВЫ</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- React Root for Popup -->
+  <div id="react-root"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

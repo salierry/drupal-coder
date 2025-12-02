@@ -1,0 +1,31 @@
+{
+  "assets": {
+    "logos": {
+      "main": "assets/logo.svg",
+      "light": "assets/logo-light.svg",
+      "favicon": "assets/favicon.ico"
+    },
+    "icons": {
+      "support": "assets/icons/support.svg",
+      "development": "assets/icons/development.svg",
+      "seo": "assets/icons/seo.svg",
+      "migration": "assets/icons/migration.svg",
+      "phone": "assets/icons/phone.svg",
+      "email": "assets/icons/email.svg",
+      "location": "assets/icons/location.svg",
+      "telegram": "assets/icons/telegram.svg",
+      "vk": "assets/icons/vk.svg",
+      "github": "assets/icons/github.svg"
+    },
+    "images": {
+      "heroPattern": "assets/hero-pattern.svg",
+      "cases": {
+        "case1": "assets/cases/case1.jpg",
+        "case2": "assets/cases/case2.jpg"
+      }
+    },
+    "videos": {
+      "background": "assets/video.mp4"
+    }
+  }
+}
