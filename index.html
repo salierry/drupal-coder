@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Drupal-coder — профессиональная поддержка и разработка сайтов на Drupal. 14 лет опыта." />
+  <title>Drupal-coder — поддержка сайтов на Drupal</title>
+  
+  <!-- Конфигурация сайта -->
+  <script>
+  window.CONFIG = {
+    formEndpoint: "https://formcarry.com/s/0VNi-UehV3I",
+    api: {
+      timeout: 10000,
+      retries: 3
+    },
+    analytics: {
+      enabled: false,
+      googleAnalyticsId: null
+    },
+    features: {
+      animations: true,
+      lazyLoading: true,
+      serviceWorker: false
+    },
+    contact: {
+      phone: "8 800 222-26-73",
+      email: "info@drupal-coder.ru",
+      address: "г. Краснодар, ул. Красная, 180"
+    },
+    social: {
+      telegram: "#",
+      vk: "#",
+      github: "#"
+    }
+  };
+  window.FORM_ENDPOINT = window.CONFIG.formEndpoint;
+  </script>
+  
+  <!-- Шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <script type="module" crossorigin src="/drupal-coder/assets/main-RzTXHt4q.js"></script>
+  <link rel="stylesheet" crossorigin href="/drupal-coder/assets/main-CIDhiOrm.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-nav">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo">
+            <img src="/drupal-coder/assets/logo-Be6m0IFJ.svg" alt="Drupal-coder" width="160" height="35">
+          </div>
+          
+          <!-- Desktop Menu -->
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#services">ПОДДЕРЖКА DRUPAL</a></li>
+            <li class="nav-item has-dropdown">
+              <a href="#admin">АДМИНИСТРИРОВАНИЕ</a>
+              <ul class="dropdown-menu">
+                <li><a href="#migration">Миграция</a></li>
+                <li><a href="#backups">Бэкапы</a></li>
+                <li><a href="#security">Аудит безопасности</a></li>
+                <li><a href="#optimization">Оптимизация скорости</a></li>
+                <li><a href="#https">Переезд на HTTPS</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="#seo">ПРОДВИЖЕНИЕ</a></li>
+            <li class="nav-item"><a href="#reviews">ОТЗЫВЫ</a></li>
+            <li class="nav-item"><a href="#faq">FAQ</a></li>
+          </ul>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="mobile-toggle" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Contact Button -->
+          <button class="contact-btn" id="contact-open">Связь с нами</button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero-new-with-video">
+      <video autoplay muted loop playsinline class="hero-new-video">
+        <source src="/drupal-coder/assets/video-4MCeTHaa.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-new-video-overlay"></div>
+      
+      <div class="container">
+        <div class="hero-new-content">
+          <div class="hero-text">
+            <h1 class="hero-title-new">
+              Поддержка сайтов на Drupal
+            </h1>
+            <p class="hero-subtitle-new">
+              Сопровождение и поддержка сайтов<br>
+              на CMS Drupal любых версий и запущенности
+            </p>
+            <div class="hero-actions">
+              <a href="#pricing" class="btn btn-primary">ТАРИФЫ</a>
+            </div>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-content">
+                <div class="stat-number orange">#1</div>
+                <div class="rating-badge">
+                  <img src="data:image/png;base64,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" alt="Рейтинг" width="40" height="40">
+                </div>
+              </div>
+              <div class="stat-text">Drupal-разработчик в России</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number orange">50+</div>
+              <div class="stat-text">модулей и тем<br>в формате DrupalGive</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number orange">3+</div>
+              <div class="stat-text">средний опыт<br>специалистов более 3 лет</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number orange">14</div>
+              <div class="stat-text">лет в сфере Drupal</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number orange">90 000+</div>
+              <div class="stat-text">часов поддержки<br>сайтов на Drupal</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number orange">300+</div>
+              <div class="stat-text">Проектов на поддержке</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Services Grid Section -->
+    <section class="services-grid-section" id="services">
+      <div class="container">
+        <div class="expertise-header-left">
+          <h2>13 лет совершенствуем <br> компетенции в Друпал <br> поддержке!</h2>
+          <p>Разрабатываем и оптимизируем модули,<br> расширяем функциональность сайтов, обновляем дизайн</p>
+        </div>
+        
+        <div class="services-grid-new-4col">
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="data:image/svg+xml,%3csvg%20width='81'%20height='81'%20viewBox='0%200%2081%2081'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M33.8611%2067H10C7.79086%2067%206%2065.2091%206%2063V58.5M70.2222%2067V67C72.3086%2067%2074%2065.3086%2074%2063.2222V58.5M6%2058.5V21C6%2018.7909%207.79086%2017%2010%2017H13M6%2058.5H27.5M74%2058.5V21C74%2018.7909%2072.2091%2017%2070%2017H68M74%2058.5H61.5'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M54.8052%2063.3124L64.9467%2073.454C65.9839%2074.4912%2067.6656%2074.4912%2068.7028%2073.454V73.454C69.7401%2072.4167%2069.7401%2070.7351%2068.7028%2069.6978L58.5613%2059.5563'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M32%2067.5V76H48V71'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M57%2076H23'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3ccircle%20cx='46.5416'%20cy='50.5416'%20r='16.8107'%20transform='rotate(-45%2046.5416%2050.5416)'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3ccircle%20cx='46.5416'%20cy='50.5416'%20r='16.8107'%20transform='rotate(-45%2046.5416%2050.5416)'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M63%2034.5V10C63%207.79086%2061.2091%206%2059%206H22C19.7909%206%2018%207.79086%2018%2010V51'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M28%2021H52.5'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M28%2015H52.5'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M28%2027H52.5'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M39%2053H50'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M39%2047H55'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3c/svg%3e" alt="Добавление информации" width="60" height="60">
+            </div>
+            <h3>Добавление информации на сайт, создание новых разделов</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="data:image/svg+xml,%3csvg%20width='81'%20height='81'%20viewBox='0%200%2081%2081'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3%2059.82V64C3%2066.7614%205.23857%2069%208%2069H33.3194H72.8889V69C75.1594%2069%2077%2067.1594%2077%2064.8889V59.82M3%2059.82V20C3%2017.2386%205.23858%2015%208%2015H10.6176H14M3%2059.82H44.5M77%2059.82V20C77%2017.2386%2074.7614%2015%2072%2015H70.4706H53.5M77%2059.82H61'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M41%2053H24.3071H19C16.2386%2053%2014%2050.7614%2014%2048V12C14%209.23858%2016.2386%207%2019%207H24.3071H48C50.7614%207%2053%209.23858%2053%2012V41.5'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M30.25%2018V15C30.25%2014.0335%2031.0335%2013.25%2032%2013.25H33.2286H42C42.9665%2013.25%2043.75%2014.0335%2043.75%2015V18C43.75%2018.9665%2042.9665%2019.75%2042%2019.75H33.2286H32C31.0335%2019.75%2030.25%2018.9665%2030.25%2018Z'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M30.25%2044V41C30.25%2040.0335%2031.0335%2039.25%2032%2039.25H33.2286H42C42.9665%2039.25%2043.75%2040.0335%2043.75%2041V44C43.75%2044.9665%2042.9665%2045.75%2042%2045.75H33.2286H32C31.0335%2045.75%2030.25%2044.9665%2030.25%2044Z'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M30.25%2031V28C30.25%2027.0335%2031.0335%2026.25%2032%2026.25H33.2286H42C42.9665%2026.25%2043.75%2027.0335%2043.75%2028V31C43.75%2031.9665%2042.9665%2032.75%2042%2032.75H33.2286H32C31.0335%2032.75%2030.25%2031.9665%2030.25%2031Z'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M32%2069V76H48V69'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M57%2076H23'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3ccircle%20cx='52'%20cy='53'%20r='10.75'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M48%2053C48.4741%2053%2053.5309%2053%2056%2053'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M52%2049C52%2049.4741%2052%2054.5309%2052%2057'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M18.5%2014H25.5'%20stroke='%23F14D34'%20stroke-width='3'/%3e%3cpath%20d='M18.5%2019H22.5'%20stroke='%23F14D34'%20stroke-width='3'/%3e%3cpath%20d='M18.5%2027H25.5'%20stroke='%23F14D34'%20stroke-width='3'/%3e%3cpath%20d='M18.5%2032H22.5'%20stroke='%23F14D34'%20stroke-width='3'/%3e%3cpath%20d='M18.5%2040H25.5'%20stroke='%23F14D34'%20stroke-width='3'/%3e%3cpath%20d='M18.5%2045H22.5'%20stroke='%23F14D34'%20stroke-width='3'/%3e%3c/svg%3e" alt="Аудит безопасности" width="60" height="60">
+            </div>
+            <h3>Аудит и мониторинг безопасности Drupal сайтов</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="data:image/svg+xml,%3csvg%20width='81'%20height='81'%20viewBox='0%200%2081%2081'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.25%2063V21C6.25%2018.9289%207.92893%2017.25%2010%2017.25H23.5H70C72.0711%2017.25%2073.75%2018.9289%2073.75%2021V63C73.75%2065.0711%2072.0711%2066.75%2070%2066.75H23.5H10C7.92893%2066.75%206.25%2065.0711%206.25%2063Z'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M30.5%2024H37.5'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M11%2024H18'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M11%2035H18'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M11%2041H18'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M11%2047H18'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M11%2053H15'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M41%2024H48'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M52%2024H59'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M36.852%2048.168C38.56%2048.168%2039.974%2047.552%2040.898%2046.418L39.442%2045.074C38.784%2045.844%2037.958%2046.236%2036.978%2046.236C35.144%2046.236%2033.842%2044.948%2033.842%2043.1C33.842%2041.252%2035.144%2039.964%2036.978%2039.964C37.958%2039.964%2038.784%2040.356%2039.442%2041.112L40.898%2039.768C39.974%2038.648%2038.56%2038.032%2036.866%2038.032C33.814%2038.032%2031.546%2040.146%2031.546%2043.1C31.546%2046.054%2033.814%2048.168%2036.852%2048.168ZM51.1096%2048L48.9116%2044.85C50.1856%2044.304%2050.9276%2043.226%2050.9276%2041.756C50.9276%2039.558%2049.2896%2038.2%2046.6716%2038.2H42.4296V48H44.6976V45.27H46.6716H46.7836L48.6736%2048H51.1096ZM48.6316%2041.756C48.6316%2042.82%2047.9316%2043.464%2046.5456%2043.464H44.6976V40.048H46.5456C47.9316%2040.048%2048.6316%2040.678%2048.6316%2041.756ZM63.7705%2048L63.7425%2038.2H61.8805L58.2685%2044.29L54.6005%2038.2H52.7245V48H54.8525V42.246L57.7225%2046.964H58.7445L61.6285%2042.12L61.6425%2048H63.7705Z'%20fill='%23050C33'/%3e%3c/svg%3e" alt="Разработка модулей" width="60" height="60">
+            </div>
+            <h3>Разработка и оптимизация модулей сайта</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="data:image/svg+xml,%3csvg%20width='81'%20height='81'%20viewBox='0%200%2081%2081'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M75%2051V63C75%2065.7614%2072.7614%2068%2070%2068H10C7.23858%2068%205%2065.7614%205%2063V51'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M10.25%2061V54C10.25%2053.0335%2011.0335%2052.25%2012%2052.25H68C68.9665%2052.25%2069.75%2053.0335%2069.75%2054V61C69.75%2061.9665%2068.9665%2062.75%2068%2062.75H12C11.0335%2062.75%2010.25%2061.9665%2010.25%2061Z'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M10.25%2045V38C10.25%2037.0335%2011.0335%2036.25%2012%2036.25H68C68.9665%2036.25%2069.75%2037.0335%2069.75%2038V45C69.75%2045.9665%2068.9665%2046.75%2068%2046.75H12C11.0335%2046.75%2010.25%2045.9665%2010.25%2045Z'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M29%2012.05L33%208M33%208L37%2012.05M33%208V30'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M22%2026.5H12.5'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M22%2022L5%2022'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M58%2011H67.5'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M58%2022H63'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M58%2015.5L75%2015.5'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M43%2025.95L47%2030M47%2030L51%2025.95M47%2030V7'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3c/svg%3e" alt="Миграция Drupal" width="60" height="60">
+            </div>
+            <h3>Миграция, импорт контента и апгрейд Drupal</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="data:image/svg+xml,%3csvg%20width='81'%20height='81'%20viewBox='0%200%2081%2081'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M36.5972%2067H10C7.23858%2067%205%2064.7614%205%2062V58.5M71.1111%2067V67C73.2589%2067%2075%2065.2589%2075%2063.1111V58.5M5%2058.5V22C5%2019.2386%207.23858%2017%2010%2017H12.2059H68.8235H70C72.7614%2017%2075%2019.2386%2075%2022V58.5M5%2058.5H36.5972M75%2058.5H71.1111'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M18%2028L14%2031.5L18%2035'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M28%2028L32%2031.5L28%2035'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M21%2037L25%2025'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M42%2028.5C43.4815%2028.5%2059.284%2028.5%2067%2028.5'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M42%2033C43.4815%2033%2059.284%2033%2067%2033'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M42%2037C43.4815%2037%2059.284%2037%2067%2037'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M42%2041C42.5926%2041%2048.9136%2041%2052%2041'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M11%2044C12.2444%2044%2025.5185%2044%2032%2044'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M11%2052C12.2444%2052%2025.5185%2052%2032%2052'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M11%2048C11.8296%2048%2020.679%2048%2025%2048'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M32%2067L32%2076'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M37%2076H23'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3crect%20x='39.25'%20y='51.25'%20width='30.5'%20height='9.5'%20rx='3.75'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M46%2056C47.0074%2056%2057.7531%2056%2063%2056'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3crect%20x='39.25'%20y='65.25'%20width='30.5'%20height='9.5'%20rx='3.75'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M46%2070C47.0074%2070%2057.7531%2070%2063%2070'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3c/svg%3e" alt="Интеграция" width="60" height="60">
+            </div>
+            <h3>Интеграция с CRM, 1C, платежными системами</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="data:image/svg+xml,%3csvg%20width='81'%20height='81'%20viewBox='0%200%2081%2081'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0)'%3e%3cpath%20d='M5%2024V63C5%2065.7614%207.23858%2068%2010%2068H52M5%2024V16C5%2013.2386%207.23858%2011%2010%2011H70C72.7614%2011%2075%2013.2386%2075%2016V49.5M5%2024H40H74.5'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M78.7149%2068.0659L73.7231%2063.0742C74.8647%2059.7626%2074.076%2055.8951%2071.379%2053.1981C68.6067%2050.4258%2064.5975%2049.6699%2061.2266%2050.9543L66.4576%2056.1853L65.4646%2060.4647L61.1852%2061.4576L55.9543%2056.2266C54.6699%2059.5975%2055.4258%2063.6067%2058.1981%2066.379C60.8951%2069.076%2064.7625%2069.8647%2068.0742%2068.7231L73.0659%2073.7149'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M11%2018H14'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M17%2018H20'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M23%2018H26'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M16%2032V35M16%2058.5V44.25'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3ccircle%20cx='16'%20cy='38'%20r='3'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M26%2032V48M26%2058.5V56'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3ccircle%20cx='26'%20cy='50'%20r='3'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M36%2032V39M36%2058.5V48'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3ccircle%20cx='36'%20cy='42'%20r='3'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3crect%20x='48'%20y='32'%20width='19'%20height='7'%20rx='1'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M48%2044L67%2044'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M48%2048L57%2048'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0'%3e%3crect%20width='81'%20height='81'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="Оптимизация" width="60" height="60">
+            </div>
+            <h3>Оптимизация и ускорение Drupal-сайтов</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="data:image/svg+xml,%3csvg%20width='81'%20height='81'%20viewBox='0%200%2081%2081'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M42%2034H22.1357H15V51H22.1357H42'%20stroke='%23050C33'%20stroke-width='2'%20stroke-dasharray='3%204'/%3e%3cpath%20d='M64%2033V21C64%2018.2386%2061.7614%2016%2059%2016H21.3286H11C8.23858%2016%206%2018.2386%206%2021V63C6%2065.7614%208.23857%2068%2011%2068H21.3286H59C61.7614%2068%2064%2065.7614%2064%2063V52'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M41.25%2048V37C41.25%2034.9289%2042.9289%2033.25%2045%2033.25H50.8357H76C78.0711%2033.25%2079.75%2034.9289%2079.75%2037V48C79.75%2050.0711%2078.0711%2051.75%2076%2051.75H50.8357H45C42.9289%2051.75%2041.25%2050.0711%2041.25%2048Z'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M48%2040C49.4815%2040%2065.284%2040%2073%2040'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M12%2027C13.4815%2027%2029.284%2027%2037%2027'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M12%2058C12.9481%2058%2023.0617%2058%2028%2058'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M12%2062C13.1852%2062%2025.8272%2062%2032%2062'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M24%2042C24.4741%2042%2029.5309%2042%2032%2042'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M28%2038C28%2038.4741%2028%2043.5309%2028%2046'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M6%2021C9.43704%2021%2046.0988%2021%2064%2021'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M48%2045C48.9481%2045%2059.0617%2045%2064%2045'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3c/svg%3e" alt="Доработки" width="60" height="60">
+            </div>
+            <h3>Любые доработки функционала и дизайна</h3>
+          </div>
+          
+          <div class="service-item-new">
+            <div class="service-icon-new">
+              <img src="data:image/svg+xml,%3csvg%20width='81'%20height='81'%20viewBox='0%200%2081%2081'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M7%2016.2759H54V13C54%2010.2386%2051.7614%208%2049%208H11C8.23858%208%206%2010.2386%206%2013V16.2759V29.5172V46.0345C6%2048.7959%208.23858%2051.0345%2011%2051.0345H49C51.7614%2051.0345%2054%2048.796%2054%2046.0346C54%2043.5502%2054%2041.0051%2054%2039.5'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M26%2051.5172V68.0345C26%2070.7959%2028.2386%2073.0345%2031%2073.0345H69C71.7614%2073.0345%2074%2070.7959%2074%2068.0345V38.2759M74%2038.2759V35C74%2032.2386%2071.7614%2030%2069%2030H62M74%2038.2759H62'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M55%2020L43.5%2023.5294M55%2035L44.0535%2032.4804C43.6857%2032.3957%2043.3094%2032.3529%2042.932%2032.3529H39.4118C36.9752%2032.3529%2035%2030.3777%2035%2027.9412V27.9412C35%2025.5046%2036.9752%2023.5294%2039.4118%2023.5294H43.5M43.5%2023.5294V27.9412'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3crect%20x='54'%20y='16'%20width='7'%20height='23'%20rx='3.5'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M44%2032V40C44%2041.1046%2043.1046%2042%2042%2042V42C40.8954%2042%2040%2041.1046%2040%2040V32'%20stroke='%23050C33'%20stroke-width='2.5'/%3e%3cpath%20d='M10.4573%2012.5517H12.5144'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M14.5713%2012.5517H16.6284'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M18.6858%2012.5517H20.7429'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M13%2036L28%2036'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M13%2040L21%2040'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3crect%20x='14.25'%20y='23.25'%20width='12.5'%20height='8.5'%20rx='3.75'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3ccircle%20cx='59.8995'%20cy='58.8995'%20r='5.75'%20transform='rotate(-45%2059.8995%2058.8995)'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3cpath%20d='M64.1426%2063.1421L68.0317%2067.0312'%20stroke='%23F14D34'%20stroke-width='2.5'/%3e%3c/svg%3e" alt="Веб-маркетинг" width="60" height="60">
+            </div>
+            <h3>Веб-маркетинг, консультации и работы по SEO</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+      <div class="container">
+        <div class="section-header">
+          <h2>Наша команда</h2>
+        </div>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="/drupal-coder/assets/sergey-DTQ7MelA.jpg" alt="Сергей Синицын" loading="lazy">
+            </div>
+            <h3>Сергей Синицын</h3>
+            <p class="member-role">Руководитель отдела веб-разработки</p>
+            <p class="member-bio">Кандидат технических наук, опыт работы 15 лет</p>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="/drupal-coder/assets/roman-CSAgC4kc.jpg" alt="Роман Агабеков" loading="lazy">
+            </div>
+            <h3>Роман Агабеков</h3>
+            <p class="member-role">Руководитель отдела DevOPS</p>
+            <p class="member-bio">Сертифицированный Drupal-разработчик, опыт 12 лет</p>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="/drupal-coder/assets/aleksey-DzEmwvQq.jpg" alt="Алексей Синицын" loading="lazy">
+            </div>
+            <h3>Алексей Синицын</h3>
+            <p class="member-role">Руководитель отдела поддержки сайтов</p>
+            <p class="member-bio">Эксперт по Drupal, опыт 10 лет</p>
+          </div>
+
+          <div class="team-member">
+            <div class="member-photo">
+              <img src="/drupal-coder/assets/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-12-01%20%D0%B2%2013.39.58-CuQx9Gz0.png" alt="Царенов Олег" loading="lazy">
+            </div>
+            <h3>Царенов Олег</h3>
+            <p class="member-role">студент ПИ-22/2</p>
+            <p class="member-bio">Умный человек чета там занет, кандидат каких то наук, сайт вот сделал</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Тарифы поддержки</h2>
+          <p>Гибкие условия для проектов любого масштаба</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Стартовый</h3>
+            </div>
+            <ul class="pricing-features">
+              <li>✓ Мониторинг доступности</li>
+              <li>✓ Резервное копирование</li>
+              <li>✓ Обновления безопасности</li>
+              <li>✓ Поддержка 5×8 (рабочие дни)</li>
+              <li>✓ Время реакции: 24 часа</li>
+            </ul>
+            <button class="btn btn-outline pricing-btn" onclick="window.dispatchEvent(new CustomEvent('open-react-popup'))">Выбрать тариф</button>
+          </div>
+
+          <div class="pricing-card popular">
+            <div class="popular-badge">Популярный</div>
+            <div class="pricing-header">
+              <h3>Бизнес</h3>
+            </div>
+            <ul class="pricing-features">
+              <li>✓ Все из Стартового</li>
+              <li>✓ Проактивный мониторинг</li>
+              <li>✓ Оптимизация производительности</li>
+              <li>✓ Поддержка 12×7</li>
+              <li>✓ Время реакции: 4 часа</li>
+              <li>✓ Персональный менеджер</li>
+            </ul>
+            <button class="btn btn-primary pricing-btn" onclick="window.dispatchEvent(new CustomEvent('open-react-popup'))">Выбрать тариф</button>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>VIP</h3>
+            </div>
+            <ul class="pricing-features">
+              <li>✓ Все из Бизнес</li>
+              <li>✓ Выделенный инженер</li>
+              <li>✓ Гарантия SLA 99.9%</li>
+              <li>✓ Поддержка 24×7</li>
+              <li>✓ Время реакции: 15 минут</li>
+              <li>✓ Ежемесячные отчеты</li>
+            </ul>
+            <button class="btn btn-outline pricing-btn" onclick="window.dispatchEvent(new CustomEvent('open-react-popup'))">Выбрать тариф</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section class="cases" id="cases">
+      <div class="container">
+        <div class="section-header">
+          <h2>Наши кейсы</h2>
+          <p>Реальные примеры успешных проектов</p>
+        </div>
+        <div class="cases-grid">
+          <div class="case-card">
+            <div class="case-image">
+              <img src="/drupal-coder/assets/mvideo-Ccl545jL.jpg" alt="Интернет-магазин электроники" loading="lazy">
+            </div>
+            <div class="case-content">
+              <h3>Интернет-магазин электроники</h3>
+              <p>Разработка высоконагруженного магазина с интеграцией 1С и платежных систем</p>
+              <div class="case-stats">
+                <div class="case-stat">
+                  <strong>+40%</strong>
+                  <span>Конверсия</span>
+                </div>
+                <div class="case-stat">
+                  <strong>2.5с</strong>
+                  <span>Загрузка страницы</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-card">
+            <div class="case-image">
+              <img src="/drupal-coder/assets/corparat-CRt83qSu.jpg" alt="Корпоративный портал" loading="lazy">
+            </div>
+            <div class="case-content">
+              <h3>Корпоративный портал</h3>
+              <p>Создание интранет-портала для 5000+ сотрудников с системой документооборота</p>
+              <div class="case-stats">
+                <div class="case-stat">
+                  <strong>5000+</strong>
+                  <span>Пользователей</span>
+                </div>
+                <div class="case-stat">
+                  <strong>99.9%</strong>
+                  <span>Доступность</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <h2>Отзывы клиентов</h2>
+        </div>
+        <div class="reviews-slider-single">
+          <div class="review-card-large">
+
+            <div class="review-content">
+              
+              <p>"Долгие поиски единственного и неповторимого мастера на многострадальный сайт www.cielparfum.com, который был собран крайне некомпетентным программистом и раз в месяц стабильно грозил погибнуть, привели меня на сайт и, в итоге, к ребятам из Drupal-coder. И вот уже практически полгода как не проходит и дня, чтобы я не поудивлялась и не порадовалась своему везению!</p>
+              <p>Починили все, что не работало - от поиска до отображения меню. Провели редизайн - не отходя от желаемого, но со своими существенными и качественными дополнениями.</p>
+              <p>Осуществили ряд проектов - конкурсы, тесты и тд. А уж мелких починок и доработок - не счесть! И главное - все качественно и быстро (не взирая на не самый "быстрый" тариф). Есть вопросы - замечательный Алексей всегда подскажет, поддержит, отремонтирует и/или просто сделает с нуля. Есть задумка для реализации - замечательный Сергей обсудит и предложит идеальный вариант. Есть проблема - замечательные Надежда и Роман починят, поправят, сделают! Ребята доказали, что эта CMS - мощная и грамотная система управления. Надеюсь, что наше сотрудничество затянется надолго! Спасибо!!!"</p>
+            </div>
+            <div class="review-author">
+            <img src="data:image/png;base64,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" alt="Светлана Никулова" loading="lazy">
+              <div class="author-info">
+                <h4>Светлана Никулова</h4>
+                <p>Руководитель отдела веб-проектов группы компаний «СИЭЛЬ ПАРФЮМ»</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2>FAQ</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>1. Кто непосредственно занимается поддержкой?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Царенов Олег ПИ-22/2</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>2. Как организована работа поддержки?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Мы используем систему Helpdesk для управления задачами и обеспечения прозрачности работы.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>3. Что происходит, когда отработаны все предоплаченные часы за месяц?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Неиспользованные оплаченные часы переносятся на следующий месяц в пределах действия договора.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>4. Что происходит, когда не отработаны все предоплаченные часы за месяц?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Неиспользованные часы сохраняются и могут быть использованы в последующие месяцы.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>5. Как происходит оценка и согласование планируемого времени на выполнение заявок?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Время оценивается специалистами и согласовывается с клиентом перед началом работ.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>6. Сколько программистов выделяется на проект?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Количество программистов зависит от сложности проекта и выбранного тарифа поддержки.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>7. Как подать заявку на внесение изменений на сайте?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Заявки подаются через систему Helpdesk, по email или через мессенджеры.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>8. Как подать заявку на добавление пользователя, изменение настроек веб-сервера и других задач по администрированию?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Все административные задачи также оформляются через систему заявок.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>9. В течение какого времени начинается работа по заявке?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Работа по заявке начинается в течение 1 рабочего дня для стандартных тарифов и в течение 15 минут для VIP тарифов.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>10. В какое время работает поддержка?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Поддержка работает согласно выбранному тарифу: 5×8, 12×7 или 24×7.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>11. Подходят ли услуги поддержки, если необходимо произвести обновление ядра Drupal или модулей?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Да, обновления ядра и модулей входят в перечень наших услуг.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>12. Можно ли пообщаться со специалистом голосом или в мессенджере?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Да, мы предоставляем различные способы коммуникации включая голосовые звонки и мессенджеры.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer-new" id="contacts">
+    <div class="container">
+      <div class="footer-contact-form">
+        <div class="footer-form-two-columns">
+          <div class="footer-form-text">
+            <h2>Оставить заявку на <br> поддержку сайта</h2>
+            <p>Срочно нужна поддержка сайта? Ваша команда не успевает справиться самостоятельно или предыдущий подрядчик не справился с работой? Тогда вам точно к нам! Просто оставьте заявку и наш менеджер с вами свяжется!</p>
+            
+            <div class="contact-info-large">
+              <div class="contact-phone">8 800 222-26-73</div>
+              <div class="contact-email">info@drupal-coder.ru</div>
+            </div>
+          </div>
+          
+          <div class="footer-form-container">
+            <form class="footer-contact-form" id="bottom-form">
+              <input type="hidden" name="form_type" value="footer_contact">
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Ваше имя *" required>
+                </div>
+                <div class="form-group">
+                  <input type="tel" name="phone" placeholder="Телефон *" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="E-mail">
+              </div>
+              <div class="form-group">
+                <textarea name="message" placeholder="Ваш комментарий" rows="3"></textarea>
+              </div>
+              
+              <div class="form-checkboxes">
+                <label class="checkbox-label">
+                  <input type="checkbox" required>
+                  <span class="checkmark"></span>
+                  Отправляя заявку, я даю согласие на обработку своих персональных данных.*
+                </label>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-block">СВЯЖИТЕСЬ С НАМИ</button>
+              <div id="bottom-form-status" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom-new">
+        <div class="footer-legal">
+          <p>Проект ООО &laquo;Инжинилаб&raquo;, Краснодар, Россия.<br>
+          Drupal является зарегистрированной торговой маркой Dries Buytaert.</p>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; 2024 Drupal-coder. Все права защищены.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <img src="/drupal-coder/assets/logo-Be6m0IFJ.svg" alt="Drupal-coder" width="160" height="35">
+      </div>
+      <button class="mobile-close" aria-label="Закрыть меню">×</button>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li class="mobile-menu-item">
+          <div class="mobile-menu-header">
+            <a href="#services">ПОДДЕРЖКА DRUPAL</a>
+            <span class="mobile-menu-toggle">+</span>
+          </div>
+          <ul class="mobile-submenu">
+            <li><a href="#migration">Миграция</a></li>
+            <li><a href="#backups">Бэкапы</a></li>
+            <li><a href="#security">Аудит безопасности</a></li>
+            <li><a href="#optimization">Оптимизация скорости</a></li>
+            <li><a href="#https">Переезд на HTTPS</a></li>
+          </ul>
+        </li>
+        <li><a href="#admin">АДМИНИСТРИРОВАНИЕ</a></li>
+        <li><a href="#seo">ПРОДВИЖЕНИЕ</a></li>
+        <li><a href="#reviews">ОТЗЫВЫ</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- React Root for Popup -->
+  <div id="react-root"></div>
+
+  <!-- Scripts -->
+</body>
+</html>
