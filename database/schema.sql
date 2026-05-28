@@ -1,13 +1,9 @@
 -- SQL скрипт для создания базы данных и таблиц
--- Для MySQL/MariaDB
+-- Для MySQL/MariaDB (адаптировано для вузовского хостинга)
 
--- Создаем базу данных
-CREATE DATABASE IF NOT EXISTS drupal_coder_db 
-  CHARACTER SET utf8mb4 
-  COLLATE utf8mb4_unicode_ci;
-
--- Используем базу данных
-USE drupal_coder_db;
+-- Используем существующую базу данных пользователя u82290
+-- База данных уже создана на хостинге, обычно имеет имя u82290_db или просто u82290
+USE u82290;
 
 -- Таблица пользователей (для авторизации)
 CREATE TABLE IF NOT EXISTS users (
@@ -33,7 +29,3 @@ CREATE TABLE IF NOT EXISTS contact_forms (
   INDEX idx_user_id (user_id),
   INDEX idx_created_at (created_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- Пример данных для тестирования (опционально)
--- INSERT INTO users (login, password_hash) VALUES 
--- ('test_user', '$2a$10$...'); -- хеш пароля нужно сгенерировать через bcrypt
