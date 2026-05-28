@@ -254,103 +254,71 @@ class FormHandler {
     handleBottomForm(form) {
         const status = document.getElementById('bottom-form-status');
         const submitBtn = form.querySelector('button[type="submit"]');
-        
+
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             // Update UI
             this.setFormLoading(form, true);
             if (status) {
                 status.textContent = '';
                 status.className = 'form-status';
             }
-            
+
             try {
                 // Собираем данные вручную из формы
-                const formData = new FormData();
-                
-                // Получаем значения полей напрямую
                 const name = form.querySelector('[name="name"]').value;
                 const phone = form.querySelector('[name="phone"]').value;
                 const email = form.querySelector('[name="email"]').value;
                 const message = form.querySelector('[name="message"]').value;
-                
+
                 console.log('Form values:', { name, phone, email, message });
-                
-                // Добавляем только заполненные поля
-                if (name) formData.append('name', name);
-                if (phone) formData.append('phone', phone);
-                if (email) formData.append('email', email);
-                if (message) formData.append('message', message);
-                formData.append('form_type', 'footer_contact');
-                
-                const response = await fetch(window.FORM_ENDPOINT, {
+
+                // Отправляем JSON на наш сервер
+                const response = await fetch('/api/contact', {
                     method: 'POST',
-                    body: formData
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, phone, email, message })
                 });
-                
-                let result;
-                
-                // Пробуем распарсить JSON ответ
-                try {
-                    const responseText = await response.text();
-                    console.log('Raw response:', responseText);
-                    
-                    if (responseText) {
-                        result = JSON.parse(responseText);
-                    } else {
-                        // Если ответ пустой, создаем успешный результат
-                        result = { code: 200, status: 'success' };
-                    }
-                } catch (parseError) {
-                    console.log('JSON parse failed, but form was submitted');
-                    // Если не удалось распарсить JSON, но статус 200-299 - считаем успехом
-                    if (response.ok) {
-                        result = { code: 200, status: 'success' };
-                    } else {
-                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-                    }
-                }
-                
-                console.log('Formcarry response:', result);
-                
-                if (result.code === 200 || response.status === 200 || response.status === 406) {
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
                     if (status) {
-                        status.textContent = 'Отправлено! Мы свяжемся с вами в течение 15 минут';
+                        status.innerHTML = `
+                            <div style="background: #d4edda; color: #155724; padding: 10px; border-radius: 5px;">
+                                <strong>Форма успешно отправлена!</strong><br>
+                                Ваш логин: <strong>${result.login}</strong><br>
+                                Ваш пароль: <strong>${result.password}</strong><br>
+                                <a href="${result.profile_url}" target="_blank">Перейти в профиль</a>
+                            </div>
+                        `;
                         status.className = 'form-status success';
                     }
                     form.reset();
-                    
-                    // Скрываем статус через 5 секунд
-                    setTimeout(() => {
-                        if (status) {
-                            status.textContent = '';
-                            status.className = 'form-status';
-                        }
-                    }, 5000);
+
+                    // Сохраняем credentials в localStorage для возможности входа
+                    localStorage.setItem('user_credentials', JSON.stringify({
+                        login: result.login,
+                        password: result.password
+                    }));
                 } else {
-                    throw new Error(result.message || `HTTP ${response.status}`);
+                    throw new Error(result.detail?.message || result.detail || 'Ошибка при отправке');
                 }
-                
+
             } catch (error) {
                 console.error('Form submission error:', error);
                 if (status) {
-                    // Даже при ошибке, если данные дошли - показываем успех
-                    if (error.message.includes('406')) {
-                        status.textContent = 'Отправлено! Мы свяжемся с вами в течение 15 минут';
-                        status.className = 'form-status success';
-                        form.reset();
-                    } else {
-                        status.textContent = 'Ошибка при отправке. Пожалуйста, попробуйте ещё раз или свяжитесь с нами по телефону 8 800 222-26-73';
-                        status.className = 'form-status error';
-                    }
+                    status.textContent = 'Ошибка при отправке. Пожалуйста, попробуйте ещё раз или свяжитесь с нами по телефону 8 800 222-26-73';
+                    status.className = 'form-status error';
                 }
             } finally {
                 this.setFormLoading(form, false);
             }
         });
     }
-    
     enhanceFormValidation(form) {
         const inputs = form.querySelectorAll('input[required], textarea[required]');
         
